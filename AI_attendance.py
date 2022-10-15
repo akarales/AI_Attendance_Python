@@ -47,7 +47,7 @@ def markAttendance(mName):
             if dtString < '09:15:00':
                 f.writelines(f'\n{mName},Present, {dtString}, {dayandmonthyear}')
                 #elseif after 9:15am, mark as late
-            elif dtString > '09:15:00':
+            elif (dtString > '09:15:00' & dtString <= '09:45:00'):
                 f.writelines(f'\n{mName},Late, {dtString}, {dayandmonthyear}')
                 # elseif after 9:45am, mark as absent
             elif dtString > '09:45:00':
